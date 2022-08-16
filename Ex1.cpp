@@ -15,7 +15,11 @@ struct alunoMatNome {
 
 };
 
-calculoMedia(double media){
+calculoMedia(double nota1, double nota2){
+
+    double m =  (nota1 + nota2)/2;
+
+    return m;
 
 }
 
@@ -54,7 +58,10 @@ int main()
 
 // após capturar todos os dados, calculo da média das notas de todos os alunos inseridos
 
-
+    int media = 0;
+    for(i ; i > 0; i++){
+        for()
+    }
 
 
 
