@@ -1,0 +1,9 @@
+Registro dos Exercicios Propostos - 16.08
+
+
+a) Cria uma funçao para ler os dados de n pessoas 
+b) Cria uma função para consultar os dados de uma pessoa por CPF (nome, sexo, IMC). A função deve imprimir uma mensagem de erro caso não encontre o CPF
+c) Crie uma função para listar os dados (nome, altura, peso, IMC) de toas as pessoas de um determinado sexo.
+d) Escreva um programa para ler os dados (nome, cpf, sexo, altura, peso) de n pessoas, n informado pelo usuario (n<=50). Depois teste cada uma da funçoes anteriores.
+
+IMC = Peso/altura;
