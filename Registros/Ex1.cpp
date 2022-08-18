@@ -58,12 +58,12 @@ int main()
 
 // após capturar todos os dados, calculo da média das notas de todos os alunos inseridos
 
-    int media = 0;
+    /*int media = 0;
     for(i ; i > 0; i++){
         for()
     }
 
-
+*/
 
     return 0;
 }

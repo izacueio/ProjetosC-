@@ -2,6 +2,7 @@
 #define MAX 50
 #include <iostream>
 #include <cstring>
+#include <string>
 
 using namespace std;
 
@@ -20,6 +21,23 @@ struct tPessoa {
 };
 
 
+  void consultaCPF(tPessoa v[]){
+        string cpf; 
+    int achou = 0;    
+    printf("Digite o numero do CPF que deseja consultar: \n");
+    //cin.ignore();
+    scanf( "%s", cpf);
+    for(int i = 0; i < 50; i++){
+        if(cpf.compare(v[i].cpf)){
+            printf("%s %s", v[i].nome, v[i].sexo);
+            achou = 1;
+        }
+    }
+        if(achou = 0){
+            printf("%s nao encontrado", cpf);
+        }
+    };
+
 int main()
 {
     struct tPessoa a[MAX];
@@ -34,51 +52,41 @@ int main()
             break;
         }else if(cod == 1){ // se selecionar para cadastrar um novo aluno, abaixo le os dados 
     cout << "nome: "; 
-    cin.ignore();
-    getline( cin, a[i].nome);
+    //cin.ignore(); (aprender essa merda de cin)
+    scanf( "%s", a[i].nome);
 
     cout << "cpf: ";
-    cin.ignore();
-    getline( cin, a[i].cpf);
+    //cin.ignore();
+    scanf("%s", a[i].cpf);
 
     cout << "sexo: ";
-    cin.ignore();
-    getline( cin, a[i].sexo);
+    //cin.ignore();
+    scanf("%s", a[i].sexo);
 
     cout << "altura: ";
-    cin.ignore();
-    getline( cin, a[i].altura);
+    //cin.ignore();
+    scanf("%s", a[i].altura);
 
     cout << "peso: ";
-    cin.ignore();
-    getline( cin, a[i].peso);
+    //cin.ignore();
+    scanf("%s", a[i].peso);
 
 
         }
         i++;
     }while(true);
 
-    void consultaCPF(int n, tPessoa v[], string cpf)
+    printf("%s", a[0].nome);
+    printf("%s", a[0].altura);
+    printf("%s", a[0].peso);
+    printf("%s", a[0].sexo);
 
-     { int achou = 0;    
-    printf("Digite o numero do CPF que deseja consultar: \n");
-    cin.ignore();
-    getline( cin, a[i].cpf);
-    for(int i = 0; i < 50; i++){
-        if(strcmp(v[i].cpf, cpf)){
-            printf("%s %s %s", v[i].nome, v[i].sexo);
-            achou = 1;
-        }
-    }
-        if(achou = 0){
-            printf("%s não encontrado", cpf);
-        }
+    consultaCPF(a);
 
-
-    
-
+   
     return 0;
-   }
- }
+}
+  
+ 
 
 
