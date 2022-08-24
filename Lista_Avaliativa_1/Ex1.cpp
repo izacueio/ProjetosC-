@@ -33,15 +33,15 @@ void leitura(int n, tipoCompromissos compromissos[])
 }
 
 // funcao para realizar a busca
-int consulta(tipoData data, int n, tipoCompromissos compromissos[])
+int consulta(tipoData a, int n, tipoCompromissos compromissos[])
 {
 	int i;
 	int achou = 0;	// nao foram encontrados compromissos
 	for (i = 0; i < n; i++){
-		if (compromissos[i].a.mes == data.mes && compromissos[i].a.ano == data.ano)
+		if (compromissos[i].a.mes == a.mes && compromissos[i].a.ano == a.ano)
 		{
 			printf("%s\n", compromissos[i].nome);
-			achou = 1
+			achou = 1;
 		}
 	}
 	return achou;
@@ -51,27 +51,36 @@ int consulta(tipoData data, int n, tipoCompromissos compromissos[])
 int main()
 {
 	tipoCompromissos compromissos[DIM];
-	int i, n;
-	tipoData data;
+	int n;
+    int i;
+	tipoData a;
 
 	//printf("Informe o compromissos: ");
 	//scanf("%d", &n);
-	
 
 	// chamada da funcao leitura
 	leitura(n, compromissos);
-
-	printf("\nInforme uma data (mm/aaaa) -- (00/00 para encerrar): ");
-	scanf("%d/%d", &data.mes, &data.ano);
-	while( data.mes != 0 && data.ano != 0){
+    //scanf("%d/%d", &a.mes, &a.ano);
+    /*for(int i = 0; i < n; i++){
+        if(consulta(data, n, compromissos) == 0)
+			printf("Nenhum compromisso achado.\n");
+        scanf("%d/%d", &data.mes, &data.ano);
+    }
+    /*while(data.mes != 0 && data.ano != 0){
 		if(consulta(data, n, compromissos) == 0)
 			printf("Nenhum compromisso achado.\n");
-		
-		printf("\nInforme uma data (dd/mm) -- (00/00 para encerrar): ");
-		scanf("%d/%d", &data.dia, &data.mes);
-	}
+        scanf("%d/%d", &data.mes, &data.ano);
+    }*/
+
+	do {
+        scanf("%d/%d", &a.mes, &a.ano);
+		if(consulta(a, n, compromissos) == 0)
+			printf("Nenhum compromisso achado.\n");
+		    printf("\nInforme uma data (dd/mm) -- (00/00 para encerrar): ");
+	}while(a.mes != 0 && a.ano != 0);
+
+    return 0;
 	
-	return 0;
 }
 
 
