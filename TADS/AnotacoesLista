@@ -1,0 +1,55 @@
+Universidade Federal de Mato Grosso do Sul
+Faculdade de Computação
+Professor Márcio Silva
+Técnicas Avançadas de Desenvolvimento de Software
+Lista 1 - Paradigma Funcional
+Em Dupla
+ENTREGA: 09 de Setembro/2022, até 20:30h
+no ava.ufms.br
+1. Java é uma linguagem que foi criada originalmente seguindo o paradigma Orientado
+a Objetos. Contudo, em versões recentes ela introduziu elementos da programação
+funcional. Nesta atividade, você deverá apresentar exemplos de código Java para
+para todos conceitos apresentados na aula de paradigma funcional. Considere um
+método estático em JAVA o equivalente funcional a uma função em python ou
+Javascript.
+2. Nesta atividade vocês deverão implementar duas funções clássicas.
+Menor: Esta função recebe um vetor e retorna o menor elemento neste mesmo
+vetor.
+Por exemplo, para o vetor [1, 9, 7, -2, 20] o retorno será -2
+Remove: Esta função recebe um vetor e um valor a ser removido nele (primeira
+ocorrência).
+Por exemplo, para os parâmetros [1,2, 1, 6, 8] e 1 o retorno será [2, 1, 6, 8].
+Essas funções deverão ser implementadas em JavaScript/Java seguindo o paradigma
+funcional. Portanto, não é permitido o uso de estruturas de repetição e evitado, ao
+máximo variáveis locais.
+Use de recursividade para resolver o problema. Se for utilizar JAVA, são permitidos
+apenas métodos estáticos.
+Junto ao código envie um teste usando os números do seu RGA (imprima o resultado
+na tela).
+RGA Izabella: 201919020101
+
+3. Nesta atividade vocês deverão implementar duas funções usando dos conceitos da
+programação funcional.
+Rotacionar: Esta função recebe um vetor e coloca o primeiro elemento ao final do
+mesmo.
+Por exemplo, para o vetor [1, 9, 7, -2, 20] o retorno será [9, 7, -2, 20, 1]
+Atenção: o vetor original não poderá ser modificado! o resultado deverá
+gerar um novo array e retornar o mesmo.
+Selection-Sort: Esta função recebe um vetor e ordena seus valores usando do
+Selection Sort retornando um novo array ordenado.
+Para implementar esse algoritmo siga os seguintes passos:
+- Selecione o menor elemento do array (atividade anterior)
+- Remova a primeira ocorrência do menor elemento (atividade anterior)
+- Ordene recursivamente o array resultante do passo anterior (passo recursivo)
+- Retorne um array com o menor elemento na primeira posição concatenado com o
+array ordenado no passo anterior.
+Por exemplo, para o parâmetro [11, 92, 1, 6, 38, 6] o resultado esperado será [1, 6, 6,
+11, 38, 92]
+Essas funções deverão ser implementadas em JavaScript/JAVA seguindo o paradigma
+funcional. Portanto, não é permitido o uso de estruturas de repetição e evitado, ao
+máximo variáveis locais. Não utilize o método splice de arrays em JS.
+Use de recursividade para resolver o problema.
+Junto ao código envie um teste usando os números do seu RGA (dê um console.log
+no resultado).
+IMPORTANTE: O professor poderá convidar duplas por amostragem para que
+apresentem a sua solução da Lista.

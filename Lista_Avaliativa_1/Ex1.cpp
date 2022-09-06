@@ -24,9 +24,9 @@ void leitura(tipoCompromissos compromissos[])
 {
 	for (int i = 0; i < 5; i++) 
 	{
-		printf(" Compromisso : ");
+		//printf(" Compromisso : ");
 		scanf(" %[^\n]", compromissos[i].nome);
-		printf(" Data do Compromisso: ");
+		//printf(" Data do Compromisso: ");
 		scanf("%d/%d/%d", &compromissos[i].a.dia, &compromissos[i].a.mes,
 		&compromissos[i].a.ano);
 	}
