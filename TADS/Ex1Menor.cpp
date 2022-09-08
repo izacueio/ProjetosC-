@@ -14,10 +14,7 @@ int maior(int v[], int tamanho, int a){
             return maior(v, tamanho - 1, a);
     }
 
-int remove(int v[], )
-
 }
-
 
 int main (){
 
