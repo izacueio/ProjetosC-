@@ -17,14 +17,23 @@ struct valores{
 // funcao para leitura do vetor
 void leitura(valores remocao[])
 {
+    int x = 0;
 	for (int i = 0; i < 1; i++) 
 	{
 		printf(" Digite o RGA : ");
-		scanf(" %[^\n]", remocao[i].RGA);
+        scanf(" %[^\n]", remocao[i].RGA);
 		printf(" Valor a ser removido: ");
 		scanf(" %[^\n]", remocao[i].a);
+        if (remocao[i].RGA == remocao[i].a)
+        {
+            x = remocao[i].a; 
+            remocao[i].RGA = remocao[i].RGA - x; 
+            printf("o RGA sem o %d é: %d\n", &x, remocao[i].RGA);
+        }
+        
 	}
 }
+
 
 int main()
 {
