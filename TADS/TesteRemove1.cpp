@@ -1,26 +1,33 @@
+/*Remove: Esta função recebe um vetor e um valor a ser removido nele (primeira
+ocorrência).
+Por exemplo, para os parâmetros [1,2, 1, 6, 8] e 1 o retorno será [2, 1, 6, 8].
+*/
+
+
 #include <stdio.h>
-#include <stdlib.h>
-#define MAX 12
+ 
+void remove(int n, int *v, int *dig);
 
-//achar o menor numero de um vetor usando recursividade
-
-int maior(int v[], int tamanho, int a){
-    if(tamanho == 0)
-        return v[a];
-    else{
-        if(v[tamanho-1] == v[a])
-            return maior(v, tamanho - 1, tamanho - 1);
-        else
-            return maior(v, tamanho - 1, tamanho - 1);
+int main(){
+    int vetorA[5] = {1, 2, 1, 6, 8};
+    int dig[5] = {0};
+    remove(20, vetorA, dig);
+    for(int i = 0; i < 5; i++){
+        if(dig[i] != 0){
+            printf("%i\n", dig[i]);
+        }
     }
-
 }
 
-int main (){
-
-    int vet[MAX] = {2,0,1,9,1,9,0,2,0,1,0,1};
-
-    printf("O menor numero do RGA e: %d\n", maior(vet, 12, 0));
-
+void remove(int n, int *v, int *dig){
+    if(n - 1 >= 0){
+        if(v[n - 1] % 2 != 0){
+            remove(n - 1, v, dig);
+        }
+        else{
+            pares[n - 1] = v[n - 1];
+            // printf("%i", pares[n - 1]);
+            remove(n- 1, v, dig);         
+        }
+    }
 }
-
