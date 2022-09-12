@@ -6,9 +6,10 @@ Em seguida, leia um nome de curso, pesquise e liste todos os alunos (a matrícul
 
 #include <stdio.h>
 #define DIM 100
-#define MAX 30
+#define MAX 50
 #include<stdlib.h>
 #include<string.h>
+#include<conio.h>
 
 struct tAluno{
 	int matricula;
@@ -21,28 +22,30 @@ void leitura(tAluno alunos[])
 {
 	for (int i = 0; i < 5; i++) 
 	{
-		printf(" matricula : ");
+		//printf(" matricula : ");
 		scanf(" %d", &alunos[i].matricula);
-		printf(" nome: ");
+		//printf(" nome: ");
 		scanf(" %[^\n]", alunos[i].nome);
-		printf(" curso: ");
+		//printf(" curso: ");
 		scanf(" %[^\n]", alunos[i].curso);
 		
 	}
 }
 
 // funcao para realizar a busca
-void consulta(tAluno alunos[])
+int consulta(tAluno alunos[])
 {
 	int i;
-	//int achou = 0;	// sem alunos
+	int achou = 0;	// sem alunos
 	for (i = 0; i < 5; i++){
-		    printf("%s\n%d\n", alunos[i].nome, alunos[i].matricula);
-		//if (strcmp(&alunos[i].curso, &alunos.curso) == 0);
-		//	printf("%s\n%d\n", alunos[i].nome, alunos[i].matricula);
-		//	achou = 1;
-		}return;
+		if(strcmp(alunos[i].curso, alunos[i].curso) == 0)
+		{
+		printf("%d %s", &alunos[i].matricula, alunos[i].nome);
+		achou = 1;
+		}
 	}
+		return achou;
+}
 	
 
 
@@ -50,16 +53,10 @@ int main()
 {
 
 	tAluno alunos[DIM];
-
+	int i;
 	// chamada da funcao leitura
 	leitura(alunos);
-    consulta(alunos);
-
-	/*do {
-        scanf(" %[^\n]", alunos[i].curso);
+    	scanf(" %[^\n]", alunos[i].curso);
 		consulta(alunos);
-		
-	}while(alunos[i].curso =! 0);
-    */return 0;
-	
-} 
+	return 0;
+}
