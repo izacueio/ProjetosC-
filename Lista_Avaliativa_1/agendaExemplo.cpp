@@ -46,7 +46,7 @@ int consulta(tipoData data, int n, tipoAgenda agenda[])
 			achou = 1;
 		}
 	}
-	return achou;
+	return achou; // se achou algum compromisso naquela data especifica
 }
 
 
