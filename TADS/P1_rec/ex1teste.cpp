@@ -5,6 +5,7 @@ int temPrimo(int n, int W[]);
 
 int a = 0; 
 int contador = 0;
+int contaprimos = 0;
 
 int main(){
 
@@ -17,10 +18,10 @@ int main(){
     }
     temPrimo(n, W);
 
-    if(contador == 0){
-        printf("Sim %d", contador);
+    if(contaprimos > 0){
+        printf("Sim");
     }else
-        printf("Nao %d", contador);
+        printf("Nao");
 
 }
 
@@ -31,7 +32,9 @@ int temPrimo(int n, int W[]){
             for(int i = 0; i < a; i++){ 
                 if(W[a] % (a+1) == 0){
                 contador++; 
-            }
+                }
+            }if(contador == 2){
+                contaprimos++;
         }a++;
         temPrimo(n, W); 
     }
