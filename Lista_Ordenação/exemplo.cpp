@@ -11,7 +11,7 @@ void insercao(int n, int v[MAX]){
             for(j = i - 1; j >= 0 && v[j] > x; j--){
                 v[j+1] = v[j];
                 v[j+1] = x;
-                }printf("Ordenado: %d", v[i]);
+                }printf("Ordenado: %d\n", v[i]);
                 
     } 
 }
