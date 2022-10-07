@@ -8,6 +8,8 @@ struct alunos{
     int problemas;
 };
 
+//alunos a[MAX];
+
 void leituraNomesPontuacao(int n, alunos a[])
 {
     for(int i = 0; i < n ; i++)
@@ -21,27 +23,20 @@ void leituraNomesPontuacao(int n, alunos a[])
 
 void imprimeReprovado(int n, alunos a[]){
 
-    int i, j, aux;
-    char auxstr[MAX];
+    int i, j, x;
+    char y[MAX];
 
-    for(i = 0; i < n; i++){
-       for(j = i+1; j < n; j++){
-            if(a[i].problemas <  a[j].problemas){
-                aux = a[i].problemas;
-                a[i].problemas = a[j].problemas;
-                a[j].problemas = aux;
-            }
-       }
+    for(i = 1; i < n; i++){
+        x = a[i].problemas;
+        strcpy(y, a[i].nome);
+        for(j = i - 1; j >= 0 && a[j].problemas < x; j--){
+            a[j+1].problemas = a[j].problemas;
+            strcpy(a[j+1].nome, a[j].nome);
+                }
+        a[j+1].problemas = x;       
+        strcpy(a[j+1].nome, y); 
+        }
     }
-    for(int i = 0; i < n; i++){
-        printf("%d %s", a[i].problemas, a[i].nome);
-        
-    }
-}
-
-
-
-
 
 
 int main()
@@ -49,6 +44,7 @@ int main()
 
 alunos a[DIM];
 
+int i;
 int n;
 printf("Insira a quantidade de alunos: \n");
 scanf("%d", &n);
@@ -56,9 +52,9 @@ scanf("%d", &n);
 leituraNomesPontuacao(n, a);
 imprimeReprovado(n, a);
 
-/*for(int i = 0; i < n; i++){
-    printf("%d", a[i].problemas);
-}*/
+for(i = 0; i < n; i++){
+    printf("%d %s ", a[i].problemas, a[i].nome);
+}
 
 return 0;
 

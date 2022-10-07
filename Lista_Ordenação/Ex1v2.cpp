@@ -28,17 +28,17 @@ void imprimeReprovado(int n, alunos a[]){
 
     for(i = 1; i < n; i++){
         x = a[i].problemas;
-        strcpy(y, a[i].nome);
+        //strcpy(y, a[i].nome);
         for(j = i - 1; j >= 0 && a[j].problemas > x; j--){
             a[j+1].problemas = a[j].problemas;
-            a[j+1].problemas = x;
-            if(strcmp(a[j].nome, y) > 0){
+            /*if(strcmp(a[j].nome, y) > 0){
                 strcpy(a[j+1].nome, a[j].nome);
                 strcpy(a[j+1].nome, y);
                 
-                 }
+                 }*/
 
                 }
+        a[j+1].problemas = x;        
         }
     }
 
@@ -48,12 +48,17 @@ int main()
 
 alunos a[DIM];
 
+int i;
 int n;
 printf("Insira a quantidade de alunos: \n");
 scanf("%d", &n);
 
 leituraNomesPontuacao(n, a);
 imprimeReprovado(n, a);
+
+for(i = 0; i < n; i++){
+    printf("%d ", a[i].problemas);
+}
 
 return 0;
 
