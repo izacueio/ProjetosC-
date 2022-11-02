@@ -9,5 +9,6 @@
         "vector": "cpp",
         "random": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Enabled",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

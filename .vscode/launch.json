@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TadsVscodeApplication<tads-vscode>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.izacueio.tadsvscode.TadsVscodeApplication",
+            "projectName": "tads-vscode",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
