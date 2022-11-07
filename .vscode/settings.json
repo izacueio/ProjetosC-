@@ -1,14 +1,1 @@
-{
-    "files.associations": {
-        "iostream": "cpp",
-        "*.tcc": "cpp",
-        "cstring": "cpp",
-        "deque": "cpp",
-        "string": "cpp",
-        "unordered_map": "cpp",
-        "vector": "cpp",
-        "random": "cpp"
-    },
-    "C_Cpp.errorSquiggles": "Enabled",
-    "java.configuration.updateBuildConfiguration": "interactive"
-}
+{}
